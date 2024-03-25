@@ -1,0 +1,12 @@
+<textarea 
+    [(ngModel)]="chatMessage" 
+    class="form-control"
+    placeholder="Hier tippen..."
+    (keyup.enter)="addMessage(chatMessage)"></textarea>
+
+<button 
+    (click)="addMessage(chatMessage)" 
+    class="btn btn-primary"
+    [disabled]="!chatMessage">Absenden</button>
+
+<div *ngIf="errorMessage">{{errorMessage}}</div>
