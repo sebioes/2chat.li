@@ -21,4 +21,7 @@ export class ChatBarComponent {
 
     alert(message);
   }
+
+
+  
 }
