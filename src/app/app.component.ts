@@ -5,6 +5,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ChatHistoryComponent } from './components/chat-history/chat-history.component';
 
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -12,12 +13,16 @@ import { ChatHistoryComponent } from './components/chat-history/chat-history.com
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
+
 export class AppComponent {
   public title = "2Chat"
-  public messageHistory = "";
+  public messageHistory: string[] = [];
 
   
   public messageSend(message: string): void {
-    this.messageHistory += message;
+    console.log(message);
+    this.messageHistory.push(message);
+    console.log(this.messageHistory);
   }
 }

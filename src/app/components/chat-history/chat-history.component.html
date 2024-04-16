@@ -1,2 +1,6 @@
-<h2>Chatverlauf</h2>
-<div class="form-control" [innerHTML]="history"></div>
+<div class="chat-history">
+  <h2>Chatverlauf</h2>
+  <div class="messages">
+    <div *ngFor="let message of history">{{ message }}</div>
+  </div>
+</div>

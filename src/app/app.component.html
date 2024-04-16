@@ -2,8 +2,8 @@
 <main class="content">
     
     <div>
-        <app-chat-history></app-chat-history>
-        <app-chat-bar></app-chat-bar>
+        <app-chat-history [history]="messageHistory"></app-chat-history>
+        <app-chat-bar (messageAdded)="messageSend($event)"></app-chat-bar>
     </div>
     
 </main>
