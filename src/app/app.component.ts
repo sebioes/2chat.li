@@ -17,12 +17,10 @@ import { ChatHistoryComponent } from './components/chat-history/chat-history.com
 
 export class AppComponent {
   public title = "2Chat"
-  public messageHistory: string[] = [];
+  public messageHistory: { message: string, timestamp: Date }[] = [];
 
   
-  public messageSend(message: string): void {
-    console.log(message);
-    this.messageHistory.push(message);
-    console.log(this.messageHistory);
+  public messageSend(message: string) {
+    this.messageHistory.push({ message, timestamp: new Date() });
   }
 }

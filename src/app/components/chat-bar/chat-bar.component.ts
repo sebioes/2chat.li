@@ -21,7 +21,6 @@ export class ChatBarComponent {
       this.errorMessage = "Bitte eine Nachricht eingeben";
       return;
     }
-    console.log(message);
     this.messageAdded.emit(message);
     this.chatMessage = '';
 
