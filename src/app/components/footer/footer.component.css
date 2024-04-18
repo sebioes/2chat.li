@@ -2,6 +2,9 @@
   background-color: #00802F;
   padding: 20px;
   color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-content {
