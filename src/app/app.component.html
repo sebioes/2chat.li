@@ -2,7 +2,6 @@
 <main class="content">
   <div>
     <app-chat-history [history]="messageHistory"></app-chat-history>
-    <app-chat-bar (messageAdded)="messageSend($event)" (nicknameSet)="setNickname($event.toString())"></app-chat-bar>
     <app-chat-message *ngFor="let message of messageHistory" [nickname]="userNickname" [message]="message.message"></app-chat-message>
     <app-chat-bar (messageAdded)="messageSend($event)"></app-chat-bar>
   </div>
