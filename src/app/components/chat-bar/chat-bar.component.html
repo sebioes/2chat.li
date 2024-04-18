@@ -1,3 +1,5 @@
+<input type="text" [(ngModel)]="nickname" placeholder="Enter your nickname">
+
 <textarea 
     [(ngModel)]="chatMessage" 
     class="form-control"
@@ -8,5 +10,6 @@
     (click)="addMessage(chatMessage)" 
     class="btn btn-primary"
     [disabled]="!chatMessage">Absenden</button>
+      
 
 <div *ngIf="errorMessage">{{errorMessage}}</div>

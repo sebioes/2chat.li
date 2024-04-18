@@ -11,5 +11,5 @@ import { Component, Input } from '@angular/core';
 
 })
 export class ChatHistoryComponent {
-  @Input() history: { message: string, timestamp: Date }[] = [];
+  @Input() history: { nickname: string, message: string, timestamp: Date }[] = [];
 }

@@ -3,6 +3,7 @@
   <div class="messages">
     <div *ngFor="let item of history">
       <p>{{ item.message }}</p>
+      <p>{{ item.nickname }}</p>
       <small>{{ item.timestamp | date:'short' }}</small>
     </div>
   </div>
