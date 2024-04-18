@@ -11,18 +11,27 @@ import { Output, EventEmitter } from '@angular/core';
   styleUrl: './chat-bar.component.css'
 })
 export class ChatBarComponent {
-  public chatMessage!: string;
+  public nickname: string = '';
+  public chatMessage: string = '';
   public errorMessage!: string;
 
-  @Output() public messageAdded = new EventEmitter<string>();
+  @Output() public nicknameSet = new EventEmitter<string>();
+  @Output() public messageAdded = new EventEmitter<{ nickname: string, message: string }>();
 
   public addMessage(message: string): void {
     if (!message) {
-      this.errorMessage = "Bitte eine Nachricht eingeben";
       return;
     }
-    this.messageAdded.emit(message);
+  
+    this.messageAdded.emit({ nickname: this.nickname, message });
     this.chatMessage = '';
-
   }
+
+  setNickname() {
+    if (this.nickname.trim() !== '') {
+      this.nicknameSet.emit(this.nickname);
+    }
+  }
+  
 }
+
