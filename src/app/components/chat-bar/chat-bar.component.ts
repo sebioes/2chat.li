@@ -27,6 +27,11 @@ export class ChatBarComponent {
     this.chatMessage = '';
   }
 
+
+  public addEmoji(emoji: string): void {
+    this.chatMessage += emoji;
+  }
+
   setNickname() {
     if (this.nickname.trim() !== '') {
       this.nicknameSet.emit(this.nickname);

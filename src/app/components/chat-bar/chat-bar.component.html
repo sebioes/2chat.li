@@ -1,4 +1,4 @@
-<input type="text" [(ngModel)]="nickname" placeholder="Enter your nickname">
+<input type="text" [(ngModel)]="nickname" placeholder="Benutzername">
 
 <textarea 
     [(ngModel)]="chatMessage" 
@@ -6,10 +6,22 @@
     placeholder="Hier tippen..."
     (keyup.enter)="addMessage(chatMessage)"></textarea>
 
+<div class="emoji-picker">
+    <span (click)="addEmoji('😊')">😊</span>
+    <span (click)="addEmoji('👍')">👍</span>
+    <span (click)="addEmoji('😂')">😂</span>
+    <span (click)="addEmoji('😎')">😎</span>
+    <span (click)="addEmoji('🎉')">🎉</span>
+    <span (click)="addEmoji('❤️')">❤️</span>
+</div>   
+
+
 <button 
     (click)="addMessage(chatMessage)" 
     class="btn btn-primary"
     [disabled]="!chatMessage">Absenden</button>
       
+
+ 
 
 <div *ngIf="errorMessage">{{errorMessage}}</div>
