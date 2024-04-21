@@ -10,10 +10,17 @@
 }
 
 .logo-container {
-  margin-left: auto; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo {
-  width: 300px;
+.logo1 {
+  max-width: 100px;
+  height: auto;
+}
+
+.logo2 {
+  max-width: 300px;
   height: auto;
 }
