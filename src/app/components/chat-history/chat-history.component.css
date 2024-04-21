@@ -45,3 +45,17 @@
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
+
+.message-container {
+  margin-bottom: 10px;
+}
+
+.message {
+  font-size: 16px;
+}
+
+.meta {
+  font-size: 12px;
+  color: #888;
+}
