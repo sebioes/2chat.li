@@ -2,9 +2,10 @@
   <h2>Chatverlauf</h2>
   <div class="messages">
     <div *ngFor="let item of history">
-      <p>{{ item.message }}</p>
-      <p>{{ item.nickname }}</p>
-      <small>{{ item.timestamp | date:'short' }}</small>
+      <div class="message-container">
+        <p class="message">{{ item.message }}</p>
+        <p class="meta">{{ item.nickname }} - {{ item.timestamp | date:'short' }}</p>
+      </div>
     </div>
   </div>
 </div>
