@@ -2,13 +2,14 @@
 FROM node:22
 
 # Set the working directory inside the container
-WORKDIR /app
+WORKDIR ~/2chat.li/app
 
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
 
 # Install app dependencies
-RUN npm install --production
+RUN npm install
+RUN npm install -g @angular/cli
 
 # Copy the rest of the app source code to the working directory
 COPY . .
@@ -17,4 +18,4 @@ COPY . .
 EXPOSE 4200
 
 # Define the command to run your app
-CMD [ "npm", "run", "start" ]
+CMD ["ng", "serve", "--host", "0.0.0.0"]

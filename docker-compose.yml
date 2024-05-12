@@ -1,9 +1,21 @@
-version: '3'
+version: "3"
+
 services:
-  app:
+  2chat:
     build: .
+    container_name: 2chat
+    restart: unless-stopped
     ports:
       - "4200:4200"
+    environment:
+      - VIRTUAL_HOST=2chat.li
+      - VIRTUAL_PORT=4200
+      - LETSENCRYPT_HOST=2chat.li
     volumes:
-      - .:/app
+      -  .:/app
     command: npm run start
+    networks:
+      - proxy
+networks:
+  proxy:
+    external: True
