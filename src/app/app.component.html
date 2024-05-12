@@ -2,7 +2,7 @@
 <main class="content">
   <div>
     <app-chat-history [history]="messageHistory"></app-chat-history>
-    <app-chat-message *ngFor="let message of messageHistory" [nickname]="userNickname" [message]="message.message"></app-chat-message>
+    <app-chat-bar (messageAdded)="messageSend($event)"></app-chat-bar>
   </div>
 </main>
 <app-footer></app-footer>

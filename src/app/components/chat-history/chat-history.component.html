@@ -4,7 +4,7 @@
     <div *ngFor="let item of history">
       <div class="message-container">
         <p class="message">{{ item.message }}</p>
-        <p class="meta">{{ item.nickname }} - {{ item.timestamp | date:'short' }}</p>
+        <p class="meta">{{ item.nickname }} - {{ formatTimestamp(item.timestamp) }}</p> <!-- Use the formatTimestamp method -->
       </div>
     </div>
   </div>
