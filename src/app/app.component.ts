@@ -19,6 +19,5 @@ import { NicknameComponent } from './components/nickname/nickname.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  public title = 'ChatAppStep';
   public nickname = '';
 }

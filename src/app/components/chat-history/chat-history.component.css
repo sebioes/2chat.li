@@ -1,36 +1,41 @@
+/* Styling for form control */
 .form-control {
-  min-height: 150px;
-  max-height: 150px;
+  min-height: 300px; /* Increased min-height */
+  max-height: 500px; /* Increased max-height */
   overflow: auto;
   display: flex;
   flex-direction: column;
 }
 
+/* Margin for alert after form control */
 .form-control + .alert {
   margin-top: 10px;
 }
 
+/* Styling for chat messages */
 .chat-message {
   border: 1px solid silver;
-  display: block;
-  height: fit-content;
-  padding: 5px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
   width: fit-content;
 }
 
+/* Styling for user's messages */
 .chat-message.me {
-  background-color: aliceblue;
+  background-color: #d2e8d3;
   align-self: flex-end;
 }
 
+/* Styling for other user's messages */
 .chat-message.other {
-  background-color: aquamarine;
+  background-color: #9ee7b7;
 }
 
+/* Styling for message metadata */
 .chat-message p:first-child {
-  margin-bottom: 0;
+  margin-bottom: 5px;
 }
 
 .chat-message p:first-child span {
@@ -40,4 +45,5 @@
 .chat-message p:first-child small {
   font-size: 0.75rem;
   margin-left: 10px;
+  color: #666;
 }

@@ -1,14 +1,14 @@
-<h2>Nick name</h2>
+<h2>Benutername</h2>
 <input
   [(ngModel)]="nickname"
   class="form-control"
-  placeholder="create nick name"
+  placeholder="Benutzername eingeben"
 />
 <button
   class="btn btn-primary"
   (click)="createNickname(nickname)"
   [disabled]="!nickname"
 >
-  create
+  erstellen
 </button>
 <div *ngIf="message" class="alert alert-success">{{ message }}</div>

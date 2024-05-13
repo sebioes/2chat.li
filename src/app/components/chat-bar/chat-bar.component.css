@@ -1,4 +1,82 @@
-textarea + button,
-button + div.alert {
+/* Adding space above the emojis */
+.emoji-picker {
+  margin-top: 10px; /* Adjust as needed */
+}
+
+/* Margin for textarea + button */
+textarea + .send-button {
   margin-top: 10px;
+}
+
+/* Margin for button + div.alert */
+.send-button + .alert {
+  margin-top: 10px;
+}
+
+/* Chat bar styling */
+.chat-bar {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin-top: 20px;
+}
+
+/* Styling for textarea container */
+.textarea-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 10px;
+}
+
+/* Styling for textarea */
+.textarea-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  resize: none;
+}
+
+/* Styling for send button */
+.send-button {
+  padding: 10px 20px;
+  background-color: #0c9b18;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for send button */
+.send-button:hover {
+  background-color: #45c059;
+}
+
+/* Error message styling */
+.error-message {
+  color: #dc3545;
+  margin-top: 5px;
+}
+
+/* Primary button styling */
+.btn-primary {
+  background-color: #0c9b18;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for primary button */
+.btn-primary:hover {
+  background-color: #97c29b;
+}
+
+/* Disabled state for primary button */
+.btn-primary:disabled {
+  opacity: 0.5;
 }

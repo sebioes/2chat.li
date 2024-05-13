@@ -74,4 +74,8 @@ export class ChatBarComponent {
       )
       .subscribe();
   }
+
+  public addEmoji(emoji: string): void {
+    this.chatMessage += emoji;
+  }
 }
