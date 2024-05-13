@@ -1,26 +1,27 @@
 .footer {
   background-color: #00802F;
-  padding: 20px;
+  padding: 20px 0; /* Changed padding to only apply top and bottom */
   color: white;
   position: fixed;
   bottom: 0;
-  width: 100%;
+  left: 0; /* Ensure footer starts from the left edge */
+  width: 100%; /* Make the footer span the entire width of the screen */
 }
 
 .footer-content {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Center the content horizontally */
   align-items: center;
 }
 
 .footer-section {
   flex: 0 1 auto;
-  margin: 0 5px;
+  margin: 0 10px; /* Increased margin for better spacing */
 }
 
 .footer-divider {
   width: 1px;
-  height: 10px;
+  height: 20px; /* Increased height for better visibility */
   background-color: #FFFFFF;
-  margin: 0 5px;
+  margin: 0 10px; /* Increased margin for better spacing */
 }

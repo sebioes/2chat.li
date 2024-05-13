@@ -2,3 +2,24 @@ input + button,
 .alert {
   margin-top: 10px;
 }
+
+
+/* Primary button styling */
+.btn-primary {
+  background-color: #0c9b18;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for primary button */
+.btn-primary:hover {
+  background-color: #97c29b;
+}
+
+/* Disabled state for primary button */
+.btn-primary:disabled {
+  opacity: 0.5;
+}

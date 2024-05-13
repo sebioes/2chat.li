@@ -1,8 +1,21 @@
-<h2>Chat-Bar</h2>
+<div class="emoji-picker">
+  <span (click)="addEmoji('😊')">😊</span>
+  <span (click)="addEmoji('👍')">👍</span>
+  <span (click)="addEmoji('😂')">😂</span>
+  <span (click)="addEmoji('😎')">😎</span>
+  <span (click)="addEmoji('🎉')">🎉</span>
+  <span (click)="addEmoji('❤️')">❤️</span>
+  <span (click)="addEmoji('😄')">😄</span>
+  <span (click)="addEmoji('😜')">😜</span>
+  <span (click)="addEmoji('🤗')">🤗</span>
+
+
+
+</div> 
 <textarea
   class="form-control"
   rows="2"
-  placeholder="type message here..."
+  placeholder="Nachricht eingeben"
   [(ngModel)]="chatMessage"
   (keyup.enter)="addMessage(chatMessage)"
 ></textarea>
@@ -11,6 +24,6 @@
   [disabled]="!chatMessage.trim() || !nickname || saving"
   (click)="addMessage(chatMessage)"
 >
-  send
+  abschicken
 </button>
 <div *ngIf="errorMessage" class="alert alert-warning">{{ errorMessage }}</div>

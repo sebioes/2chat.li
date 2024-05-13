@@ -17,6 +17,6 @@ export class NicknameComponent {
 
   public createNickname(nickname: string): void {
     this.nicknameCreate.emit(nickname);
-    this.message = `nickname: '${nickname}' created`;
+    this.message = `Benutzer: '${nickname}' erstellt`;
   }
 }

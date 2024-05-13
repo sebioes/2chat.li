@@ -1,4 +1,78 @@
-textarea + button,
-button + div.alert {
+/* Emoji Picker */
+.emoji-picker {
+  margin-top: 10px; /* Anpassen bei Bedarf */
+}
+
+/* Abstand für Textbereich + Schaltfläche */
+textarea + .send-button,
+.send-button + .alert {
   margin-top: 10px;
+}
+
+/* Chatleiste */
+.chat-bar {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin-top: 20px;
+}
+
+/* Stil für Textbereich-Container */
+.textarea-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 10px;
+}
+
+/* Stil für Textbereich */
+.textarea-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  resize: none;
+}
+
+/* Stil für Senden-Schaltfläche */
+.send-button {
+  padding: 10px 20px;
+  background-color: #0c9b18;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover-Effekt für Senden-Schaltfläche */
+.send-button:hover {
+  background-color: #45c059;
+}
+
+/* Fehlermeldung-Stil */
+.error-message {
+  color: #dc3545;
+  margin-top: 5px;
+}
+
+/* Primäre Schaltfläche */
+.btn-primary {
+  background-color: #0c9b18;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Hover-Effekt für primäre Schaltfläche */
+.btn-primary:hover {
+  background-color: #97c29b;
+}
+
+/* Deaktivierter Zustand für primäre Schaltfläche */
+.btn-primary:disabled {
+  opacity: 0.5;
 }
