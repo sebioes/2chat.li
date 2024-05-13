@@ -1,25 +1,35 @@
+/* Styling for header */
 .header {
   background-color: #ffffff;
   border-bottom: 2px solid #00802F;
   padding: 10px;
+  width: 100%; /* Make the header span the entire width of the page */
+  margin-bottom: 40px;
 }
 
+/* Styling for header content */
 .header-content {
   display: flex;
   align-items: center;
 }
 
+/* Styling for logo container */
 .logo-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: calc(100% - 20px); /* Adjusted width to ensure logos reach the end of the border line */
+  margin: 0 auto; /* Center the logo container horizontally */
+  padding: 0 10px; /* Added padding to ensure logos are not too close to the border */
 }
 
+/* Styling for logo 1 */
 .logo1 {
   max-width: 100px;
   height: auto;
 }
 
+/* Styling for logo 2 */
 .logo2 {
   max-width: 300px;
   height: auto;
