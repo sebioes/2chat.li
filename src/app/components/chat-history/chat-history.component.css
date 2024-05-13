@@ -1,10 +1,17 @@
+#scrollFrame {
+  max-height: 100vh;
+  overflow-y: auto;   /* Enable vertical scrolling */
+  display: flex;      /* Use flexbox */
+  flex-direction: column;
+}
+
 /* Styling for form control */
 .form-control {
   min-height: 300px; /* Increased min-height */
-  max-height: 500px; /* Increased max-height */
+  max-height: 55dvh; /* Increased max-height */
   overflow: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: column
 }
 
 /* Margin for alert after form control */
@@ -20,6 +27,7 @@
   margin-bottom: 15px;
   border-radius: 10px;
   width: fit-content;
+  word-break: break-all;
 }
 
 /* Styling for user's messages */

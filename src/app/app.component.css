@@ -1,8 +1,31 @@
-main {
-  min-height: 150px;
+.container {
+  max-width: 100vw;  /* Maximum width is the full viewport width */
+  max-height: 100vh; /* Maximum height is the full viewport height */
+  overflow: hidden;  /* Hide any content that overflows the container */
+  display: flex;
+  flex-direction: column;
 }
 
-main h1,
-main p {
-  color: var(--main-font-color);
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;  /* Allows the main area to grow and fill available space */
+}
+
+.row {
+  flex: 1;  /* Each row will grow to use available space */
+  display: flex;
+  width: 100%;  /* Ensure rows are full width of their container */
+}
+
+.col-md-4, .col-md-8 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;  /* Full height to align with grid behaviour */
+}
+
+.app-chat-bar {
+  width: 100%;  /* Ensures the chat bar spans the full width */
+  position: fixed;  /* Fixes the chat bar at the bottom */
+  bottom: 0;
 }

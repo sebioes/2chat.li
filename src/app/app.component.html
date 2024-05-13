@@ -5,6 +5,7 @@
     <div class="row">
       <div class="col-md-4">
         <app-nickname (nicknameCreate)="nickname = $event" />
+        <app-footer />
       </div>
       <div class="col-md-8">
         <app-chat-history [nickname]="nickname" />
@@ -16,5 +17,4 @@
       </div>
     </div>
   </main>
-  <app-footer />
 </div>
