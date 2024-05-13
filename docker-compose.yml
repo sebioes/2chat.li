@@ -28,6 +28,7 @@ services:
       - VIRTUAL_HOST=api.2chat.li
       - VIRTUAL_PORT=3000
       - NODE_ENV=production
+      - LETSENCRYPT_HOST=api.2chat.li
     volumes:
       - ./ChatApi:/app
     command: npm run start
