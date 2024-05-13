@@ -2,7 +2,7 @@
 FROM node:22
 
 # Set the working directory inside the container
-WORKDIR ~/2chat.li/app
+WORKDIR ~/2chat/app
 
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./

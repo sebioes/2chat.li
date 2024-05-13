@@ -7,7 +7,7 @@ import { ChatMessage } from '../models/chat-message';
   providedIn: 'root',
 })
 export class ChatService {
-  private readonly baseUrl = 'http://localhost:3000/';
+  private readonly baseUrl = 'https://api.2chat.li/';
 
   public constructor(private httpClient: HttpClient) {}
 
