@@ -1,27 +1,16 @@
-<input type="text" [(ngModel)]="nickname" placeholder="Benutzername">
-
-<textarea 
-    [(ngModel)]="chatMessage" 
-    class="form-control"
-    placeholder="Hier tippen..."
-    (keyup.enter)="addMessage(chatMessage)"></textarea>
-
-<div class="emoji-picker">
-    <span (click)="addEmoji('😊')">😊</span>
-    <span (click)="addEmoji('👍')">👍</span>
-    <span (click)="addEmoji('😂')">😂</span>
-    <span (click)="addEmoji('😎')">😎</span>
-    <span (click)="addEmoji('🎉')">🎉</span>
-    <span (click)="addEmoji('❤️')">❤️</span>
-</div>   
-
-
-<button 
-    (click)="addMessage(chatMessage)" 
-    class="btn btn-primary"
-    [disabled]="!chatMessage">Absenden</button>
-      
-
- 
-
-<div *ngIf="errorMessage">{{errorMessage}}</div>
+<h2>Chat-Bar</h2>
+<textarea
+  class="form-control"
+  rows="2"
+  placeholder="type message here..."
+  [(ngModel)]="chatMessage"
+  (keyup.enter)="addMessage(chatMessage)"
+></textarea>
+<button
+  class="btn btn-primary"
+  [disabled]="!chatMessage.trim() || !nickname || saving"
+  (click)="addMessage(chatMessage)"
+>
+  send
+</button>
+<div *ngIf="errorMessage" class="alert alert-warning">{{ errorMessage }}</div>

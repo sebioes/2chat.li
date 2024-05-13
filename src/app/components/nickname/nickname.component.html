@@ -1,0 +1,14 @@
+<h2>Nick name</h2>
+<input
+  [(ngModel)]="nickname"
+  class="form-control"
+  placeholder="create nick name"
+/>
+<button
+  class="btn btn-primary"
+  (click)="createNickname(nickname)"
+  [disabled]="!nickname"
+>
+  create
+</button>
+<div *ngIf="message" class="alert alert-success">{{ message }}</div>

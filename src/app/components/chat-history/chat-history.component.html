@@ -1,11 +1,21 @@
-<div class="chat-history">
-  <h2>Chatverlauf</h2>
-  <div class="messages">
-    <div *ngFor="let item of history">
-      <div class="message-container">
-        <p class="message">{{ item.message }}</p>
-        <p class="meta">{{ item.nickname }} - {{ item.timestamp | date:'short' }}</p>
-      </div>
-    </div>
+<h2>Chat-History</h2>
+<div class="form-control" #scrollFrame>
+  @for (chatMessage of chatMessages; track chatMessage ) {
+  <div
+    class="chat-message"
+    [ngClass]="{
+      me: chatMessage.nickname === nickname,
+      other: chatMessage.nickname !== nickname
+    }"
+  >
+    <p>
+      <span>{{ chatMessage.nickname }}</span>
+      <small>({{ chatMessage.createdAt | date : "dd.MM.yyyy HH:mm" }})</small>
+    </p>
+    <p [innerHTML]="chatMessage.message"></p>
   </div>
+  }
 </div>
+@if (errorMessage){
+<div class="alert alert-warning">{{ errorMessage }}</div>
+}
